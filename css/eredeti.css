@@ -1,0 +1,214 @@
+*, *::before, *::after
+{
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+}
+body
+{
+	background-image: url("pictures/background.png"); style="width:25%;"
+ 	background-color: #FFFFFFF;
+	font-family: 'Nerko One', cursive;
+	font-size: 20px;
+
+}
+
+.menu-container {
+text-align: center;
+margin-top: 140px;
+
+}
+.hex-wrapper {
+  display: inline-block;
+}
+.hex-row {
+  clear: left;
+}
+.hex-row-shift {
+    margin-left: 98px;
+    clear: left;
+}
+.hexagon {
+  float: left;
+  position: relative;
+  margin: 30px 3px;
+  width: 190px;
+  height: 110px;
+  background-color: #000;
+  background-position: center center;
+  z-index: 1;
+  /* Text styling */
+  line-height: 110px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  color: #000;
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  transition: color 500ms ease, text-shadow 500ms ease, background-color 500ms ease, -webkit-transform 1s ease-in-out;
+}
+.hexagon:hover {
+  color: #fff;
+  text-shadow: 0 0 10px white;
+  background-color: #888;
+}
+.hexagon .face1,
+.hexagon .face2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: inherit;
+  z-index: -1;
+  /* Keeps borders smooth in webkit */
+  backface-visibility: hidden;
+}
+.hexagon .face1:before,
+.hexagon .face2:before {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: inherit;
+}
+.hexagon .face1 { transform: rotate(60deg); }
+.hexagon .face1:before {
+  left: 0;
+  transform-origin: left top;
+  transform: rotate(-60deg) translate(-110px, 0);
+}
+.hexagon .face2 { transform: rotate(-60deg); }
+.hexagon .face2:before {
+  right: 0;
+  transform-origin: right top;
+  transform: rotate(60deg) translate(110px, 0);
+}
+
+@media screen and (max-width: 600px) {
+  .hex1 { margin-left: 0px;
+    clear: left;}
+ 
+}
+@media screen and (max-width: 600px) {
+  .hex2 { margin-left: -98px;
+    clear: left;}
+ 
+}
+@media screen and (max-width: 600px) {
+  .hex3 { margin-left: 98px;
+    clear: left;}
+ 
+}
+@media screen and (max-width: 600px) {
+  .hex4 {margin-left: 0px;
+    clear: left;}
+ 
+}
+@media screen and (max-width: 600px) {
+  .hex5 {margin-left: 98px;
+  clear: left;}
+ 
+}
+@media screen and (max-width: 600px) {
+  .menu-container {}
+ 
+}
+a{
+
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Nerko One', cursive;
+    font-size:20px;
+}
+
+
+
+
+
+
+
+
+/*--layout--*/
+
+    .szoveg{
+    color:rgb(196, 196, 196);
+    overflow: auto;
+    float:middle;
+    margin:auto;
+    width:90%;
+
+    padding:20px 40px;
+    background-color: rgb(56, 56, 56);
+    -moz-box-shadow:    inset 0 0 50px #000000;
+   -webkit-box-shadow: inset 0 0 50px #000000;
+   box-shadow:         inset 0 0 50px #000000;
+    }
+
+.menu{
+    overflow: auto;
+    float:middle;
+    margin:auto;
+    width:100%;
+     padding:10px 10px;
+     background-color: rgb(56, 56, 56);
+}
+.hex:hover .left{
+    
+
+        border-right: 30px solid rgb(112, 112, 112);
+        cursor:pointer;
+        transition-duration: 0.3s;
+}
+.hex:hover .middle{
+    
+        background: rgb(112, 112, 112);
+        cursor:pointer;
+        transition-duration: 0.3s;
+}
+.hex:hover .right{
+    
+        border-left: 30px solid rgb(112, 112, 112);
+        cursor:pointer;
+    transition-duration: 0.3s;
+}
+
+.hex {
+
+    float: left;
+    margin-right: -26px;
+}
+.hex .left {
+    float: left;
+    width: 0;
+    border-right: 30px solid #000;
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+}
+.hex .middle {
+    color:rgb(196, 196, 196);
+    text-align: center;
+    font-size: 40px;
+    float: left;
+    width: 60px;
+    height: 104px;
+    background: #000;
+}
+.hex .right {
+    float: left;
+    width: 0;
+    border-left: 30px solid #000;
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+}
+.hex-row {
+    clear: left;
+}
+.hex.even {
+    margin-top: 53px;
+}
+
